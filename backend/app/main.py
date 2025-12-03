@@ -1,6 +1,8 @@
 import sentry_sdk
 from fastapi import FastAPI
 from fastapi.routing import APIRoute
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 from starlette.middleware.cors import CORSMiddleware
 
 from app.api.main import api_router
@@ -31,3 +33,8 @@ if settings.all_cors_origins:
     )
 
 app.include_router(api_router, prefix=settings.API_V1_STR)
+
+# 挂载静态文件服务（用于访问上传的头像等文件）
+upload_dir = Path(settings.UPLOAD_DIR)
+upload_dir.mkdir(parents=True, exist_ok=True)
+app.mount("/uploads", StaticFiles(directory=str(upload_dir)), name="uploads")

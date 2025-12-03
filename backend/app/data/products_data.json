@@ -1,0 +1,290 @@
+[
+  {
+    "store_name_pattern": "星巴克|咖啡|饮品",
+    "category": "饮品",
+    "products": [
+      {
+        "title": "美式咖啡",
+        "subtitle": "精选阿拉比卡咖啡豆，醇厚浓郁",
+        "price": 25.0,
+        "original_price": 32.0,
+        "discount": "7.8折",
+        "image_url": "https://img.meituan.net/csc/americano.jpg",
+        "tag": "新品",
+        "sales_count": "已售1000+",
+        "category": "咖啡",
+        "member_price": 22.5,
+        "coupon_saved": 2.5,
+        "total_saved": 11.5
+      },
+      {
+        "title": "拿铁咖啡",
+        "subtitle": "意式浓缩与丝滑奶泡的完美结合",
+        "price": 32.0,
+        "original_price": 38.0,
+        "discount": "8.4折",
+        "image_url": "https://img.meituan.net/csc/latte.jpg",
+        "tag": "热销",
+        "sales_count": "已售2000+",
+        "category": "咖啡",
+        "member_price": 28.8,
+        "coupon_saved": 3.2,
+        "total_saved": 12.2
+      },
+      {
+        "title": "摩卡咖啡",
+        "subtitle": "巧克力与咖啡的甜蜜邂逅",
+        "price": 35.0,
+        "original_price": 42.0,
+        "discount": "8.3折",
+        "image_url": "https://img.meituan.net/csc/mocha.jpg",
+        "tag": "限时优惠",
+        "sales_count": "已售800+",
+        "category": "咖啡",
+        "member_price": 31.5,
+        "coupon_saved": 3.5,
+        "total_saved": 14.0
+      }
+    ]
+  },
+  {
+    "store_name_pattern": "海底捞|火锅|川菜",
+    "category": "中餐",
+    "products": [
+      {
+        "title": "麻辣锅底",
+        "subtitle": "正宗川式麻辣，香辣过瘾",
+        "price": 68.0,
+        "original_price": 88.0,
+        "discount": "7.7折",
+        "image_url": "https://img.meituan.net/csc/spicy_soup.jpg",
+        "tag": "招牌",
+        "sales_count": "已售5000+",
+        "category": "锅底",
+        "member_price": 61.2,
+        "coupon_saved": 6.8,
+        "total_saved": 33.6
+      },
+      {
+        "title": "毛肚",
+        "subtitle": "新鲜毛肚，脆嫩爽口",
+        "price": 58.0,
+        "original_price": 78.0,
+        "discount": "7.4折",
+        "image_url": "https://img.meituan.net/csc/beef_tripe.jpg",
+        "tag": "特色",
+        "sales_count": "已售3000+",
+        "category": "肉类",
+        "member_price": 52.2,
+        "coupon_saved": 5.8,
+        "total_saved": 31.6
+      },
+      {
+        "title": "虾滑",
+        "subtitle": "手工制作，Q弹鲜美",
+        "price": 42.0,
+        "original_price": 58.0,
+        "discount": "7.2折",
+        "image_url": "https://img.meituan.net/csc/shrimp_paste.jpg",
+        "tag": "推荐",
+        "sales_count": "已售2500+",
+        "category": "海鲜",
+        "member_price": 37.8,
+        "coupon_saved": 4.2,
+        "total_saved": 24.2
+      }
+    ]
+  },
+  {
+    "store_name_pattern": "优衣库|服装|时尚",
+    "category": "服装",
+    "products": [
+      {
+        "title": "基础款T恤",
+        "subtitle": "100%纯棉，舒适透气",
+        "price": 79.0,
+        "original_price": 99.0,
+        "discount": "8.0折",
+        "image_url": "https://img.meituan.net/csc/basic_tshirt.jpg",
+        "tag": "新款",
+        "sales_count": "已售8000+",
+        "category": "男装",
+        "member_price": 71.1,
+        "coupon_saved": 7.9,
+        "total_saved": 35.8
+      },
+      {
+        "title": "牛仔裤",
+        "subtitle": "经典版型，百搭时尚",
+        "price": 199.0,
+        "original_price": 299.0,
+        "discount": "6.7折",
+        "image_url": "https://img.meituan.net/csc/jeans.jpg",
+        "tag": "潮流",
+        "sales_count": "已售5000+",
+        "category": "男装",
+        "member_price": 179.1,
+        "coupon_saved": 19.9,
+        "total_saved": 139.8
+      },
+      {
+        "title": "连衣裙",
+        "subtitle": "优雅设计，修身显瘦",
+        "price": 299.0,
+        "original_price": 399.0,
+        "discount": "7.5折",
+        "image_url": "https://img.meituan.net/csc/dress.jpg",
+        "tag": "折扣",
+        "sales_count": "已售3000+",
+        "category": "女装",
+        "member_price": 269.1,
+        "coupon_saved": 29.9,
+        "total_saved": 159.8
+      }
+    ]
+  },
+  {
+    "store_name_pattern": "必胜客|披萨|西餐",
+    "category": "西餐",
+    "products": [
+      {
+        "title": "超级至尊披萨",
+        "subtitle": "多种肉类搭配，料足味美",
+        "price": 88.0,
+        "original_price": 128.0,
+        "discount": "6.9折",
+        "image_url": "https://img.meituan.net/csc/supreme_pizza.jpg",
+        "tag": "招牌",
+        "sales_count": "已售4000+",
+        "category": "披萨",
+        "member_price": 79.2,
+        "coupon_saved": 8.8,
+        "total_saved": 56.8
+      },
+      {
+        "title": "意式肉酱面",
+        "subtitle": "经典意式风味，浓郁可口",
+        "price": 45.0,
+        "original_price": 58.0,
+        "discount": "7.8折",
+        "image_url": "https://img.meituan.net/csc/spaghetti.jpg",
+        "tag": "特色",
+        "sales_count": "已售2500+",
+        "category": "意面",
+        "member_price": 40.5,
+        "coupon_saved": 4.5,
+        "total_saved": 21.5
+      },
+      {
+        "title": "烤鸡翅",
+        "subtitle": "外酥内嫩，香辣可口",
+        "price": 32.0,
+        "original_price": 42.0,
+        "discount": "7.6折",
+        "image_url": "https://img.meituan.net/csc/chicken_wings.jpg",
+        "tag": "推荐",
+        "sales_count": "已售3000+",
+        "category": "小食",
+        "member_price": 28.8,
+        "coupon_saved": 3.2,
+        "total_saved": 16.2
+      }
+    ]
+  },
+  {
+    "store_name_pattern": "华为|数码|科技",
+    "category": "数码",
+    "products": [
+      {
+        "title": "华为Mate 60 Pro",
+        "subtitle": "麒麟芯片，卫星通信，徕卡影像",
+        "price": 6999.0,
+        "original_price": 7999.0,
+        "discount": "8.8折",
+        "image_url": "https://img.meituan.net/csc/mate60_pro.jpg",
+        "tag": "新品",
+        "sales_count": "已售500+",
+        "category": "手机",
+        "member_price": 6299.1,
+        "coupon_saved": 699.9,
+        "total_saved": 1798.8
+      },
+      {
+        "title": "华为Watch GT4",
+        "subtitle": "14天续航，健康监测，运动追踪",
+        "price": 1688.0,
+        "original_price": 1988.0,
+        "discount": "8.5折",
+        "image_url": "https://img.meituan.net/csc/watch_gt4.jpg",
+        "tag": "热销",
+        "sales_count": "已售800+",
+        "category": "智能手表",
+        "member_price": 1519.2,
+        "coupon_saved": 168.8,
+        "total_saved": 636.8
+      },
+      {
+        "title": "华为FreeBuds Pro3",
+        "subtitle": "主动降噪，高清音质，长续航",
+        "price": 1499.0,
+        "original_price": 1799.0,
+        "discount": "8.3折",
+        "image_url": "https://img.meituan.net/csc/freebuds_pro3.jpg",
+        "tag": "限时优惠",
+        "sales_count": "已售1200+",
+        "category": "耳机",
+        "member_price": 1349.1,
+        "coupon_saved": 149.9,
+        "total_saved": 599.8
+      }
+    ]
+  },
+  {
+    "store_name_pattern": "周大福|珠宝|首饰",
+    "category": "珠宝",
+    "products": [
+      {
+        "title": "18K金项链",
+        "subtitle": "经典款式，精致工艺",
+        "price": 2999.0,
+        "original_price": 3999.0,
+        "discount": "7.5折",
+        "image_url": "https://img.meituan.net/csc/gold_necklace.jpg",
+        "tag": "新款",
+        "sales_count": "已售200+",
+        "category": "项链",
+        "member_price": 2699.1,
+        "coupon_saved": 299.9,
+        "total_saved": 1598.8
+      },
+      {
+        "title": "钻石戒指",
+        "subtitle": "天然钻石，完美切工",
+        "price": 8999.0,
+        "original_price": 12999.0,
+        "discount": "6.9折",
+        "image_url": "https://img.meituan.net/csc/diamond_ring.jpg",
+        "tag": "特色",
+        "sales_count": "已售100+",
+        "category": "戒指",
+        "member_price": 8099.1,
+        "coupon_saved": 899.9,
+        "total_saved": 4998.8
+      },
+      {
+        "title": "珍珠耳环",
+        "subtitle": "淡水珍珠，优雅设计",
+        "price": 1299.0,
+        "original_price": 1899.0,
+        "discount": "6.8折",
+        "image_url": "https://img.meituan.net/csc/pearl_earrings.jpg",
+        "tag": "推荐",
+        "sales_count": "已售300+",
+        "category": "耳环",
+        "member_price": 1169.1,
+        "coupon_saved": 129.9,
+        "total_saved": 858.8
+      }
+    ]
+  }
+]

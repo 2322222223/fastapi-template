@@ -1,0 +1,539 @@
+{
+  "articles": [
+    {
+      "title": "万象城春季大促开启!超值流量包限时特价",
+      "content": "春季特惠活动正式启动,多种流量包低至5折起,更有免费体验套餐等你来领取!活动期间购买任意流量包即可获得积分奖励,积分可用于兑换精美礼品。活动时间有限,先到先得!",
+      "cover_image_url": "https://example.com/images/spring_sale.jpg",
+      "type": "ACTIVITY",
+      "status": "PUBLISHED",
+      "view_count": 13000,
+      "like_count": 892,
+      "comment_count": 156,
+      "share_count": 234,
+      "hot_score": 1250.5
+    },
+    {
+      "title": "5G时代来临,如何选择适合的流量套餐?",
+      "content": "随着5G网络的普及,用户对流量的需求越来越大。本文为您详细解析如何选择最适合的流量套餐。\n\n## 1. 了解自己的使用习惯\n- 日常使用场景分析\n- 流量消耗统计\n- 网络需求评估\n\n## 2. 套餐类型对比\n- 包月套餐 vs 包年套餐\n- 定向流量 vs 通用流量\n- 本地流量 vs 全国流量\n\n## 3. 性价比分析\n- 价格对比\n- 服务内容对比\n- 附加权益分析\n\n选择适合自己的流量套餐,让每一分钱都花在刀刃上!",
+      "cover_image_url": "https://example.com/images/5g_guide.jpg",
+      "type": "TUTORIAL",
+      "status": "PUBLISHED",
+      "view_count": 8765,
+      "like_count": 453,
+      "comment_count": 89,
+      "share_count": 167,
+      "hot_score": 890.2
+    },
+    {
+      "title": "社区达人分享:流量省钱攻略大公开",
+      "content": "资深用户分享多年使用经验,教你如何用最少的钱享受最多的流量,轻松成为省钱达人!\n\n## 我的省钱心得\n\n### 1. 合理规划流量使用\n- 利用WiFi环境下载大文件\n- 关闭不必要的后台应用\n- 使用流量监控工具\n\n### 2. 选择优惠活动\n- 关注运营商官方活动\n- 参与社区流量互换\n- 利用积分兑换流量\n\n### 3. 流量包组合使用\n- 定向流量包 + 通用流量包\n- 本地流量包 + 全国流量包\n- 按需购买,避免浪费\n\n希望这些经验对大家有帮助!",
+      "cover_image_url": "https://example.com/images/saving_tips.jpg",
+      "type": "SHARE",
+      "status": "PUBLISHED",
+      "view_count": 15000,
+      "like_count": 1205,
+      "comment_count": 278,
+      "share_count": 445,
+      "hot_score": 1680.8
+    },
+    {
+      "title": "2024年最新流量套餐推荐指南",
+      "content": "2024年各大运营商推出了众多新套餐,本文为您精选最值得推荐的流量套餐。\n\n## 移动套餐推荐\n- 5G智享套餐: 100GB全国流量 + 1000分钟通话\n- 青春卡: 50GB定向流量 + 30GB通用流量\n\n## 联通套餐推荐\n- 冰激凌套餐: 200GB全国流量 + 无限通话\n- 腾讯王卡: 腾讯系应用免流 + 1GB通用流量\n\n## 电信套餐推荐\n- 天翼套餐: 150GB全国流量 + 500分钟通话\n- 星卡: 定向流量 + 通用流量组合\n\n选择套餐时要根据自己的实际需求,不要盲目追求大流量。",
+      "cover_image_url": "https://example.com/images/2024_packages.jpg",
+      "type": "TUTORIAL",
+      "status": "PUBLISHED",
+      "view_count": 6543,
+      "like_count": 321,
+      "comment_count": 67,
+      "share_count": 123,
+      "hot_score": 720.5
+    },
+    {
+      "title": "流量不够用?这些省流量技巧你必须知道",
+      "content": "流量总是不够用?别担心,掌握这些省流量技巧,让你的流量使用更高效!\n\n## 系统设置优化\n1. 关闭自动更新\n2. 限制后台应用刷新\n3. 使用省流量模式\n\n## 应用使用技巧\n1. 使用轻量版应用\n2. 开启数据压缩\n3. 离线下载内容\n\n## 网络环境利用\n1. 优先使用WiFi\n2. 利用公共WiFi\n3. 合理规划使用时间\n\n掌握这些技巧,让你的流量使用更经济实惠!",
+      "cover_image_url": "https://example.com/images/save_data.jpg",
+      "type": "SHARE",
+      "status": "PUBLISHED",
+      "view_count": 9876,
+      "like_count": 567,
+      "comment_count": 134,
+      "share_count": 289,
+      "hot_score": 1120.3
+    },
+    {
+      "title": "社区流量互换活动火热进行中",
+      "content": "社区流量互换活动正在火热进行中!参与活动即可获得丰厚奖励。\n\n## 活动详情\n- 活动时间: 即日起至月底\n- 参与方式: 发布流量互换任务\n- 奖励机制: 成功完成互换可获得积分奖励\n\n## 活动规则\n1. 发布真实有效的流量包信息\n2. 诚信交易,不得虚假宣传\n3. 及时确认交易完成\n\n快来参与活动,让闲置的流量包发挥最大价值!",
+      "cover_image_url": "https://example.com/images/exchange_activity.jpg",
+      "type": "ACTIVITY",
+      "status": "PUBLISHED",
+      "view_count": 5432,
+      "like_count": 234,
+      "comment_count": 45,
+      "share_count": 78,
+      "hot_score": 580.7
+    },
+    {
+      "title": "双十一流量包抢购攻略,错过再等一年!",
+      "content": "双十一即将到来,各大运营商纷纷推出超值流量包!本文为你整理最全的抢购攻略。\n\n## 抢购时间表\n- 11月1日: 移动5G套餐预售\n- 11月8日: 联通冰激凌套餐限时特价\n- 11月11日: 电信天翼套餐秒杀活动\n\n## 抢购技巧\n1. 提前注册账号并完善信息\n2. 设置好支付方式\n3. 关注官方直播间\n4. 使用多个设备同时抢购\n\n## 优惠力度\n- 最高可享受5折优惠\n- 买一送一活动\n- 积分翻倍奖励\n\n准备好你的手速,双十一流量包等你来抢!",
+      "cover_image_url": "https://example.com/images/double11_traffic.jpg",
+      "type": "ACTIVITY",
+      "status": "PUBLISHED",
+      "view_count": 18900,
+      "like_count": 1456,
+      "comment_count": 289,
+      "share_count": 567,
+      "hot_score": 2100.3
+    },
+    {
+      "title": "流量包使用误区大揭秘,90%的人都中招了",
+      "content": "很多用户在使用流量包时存在误区,导致流量浪费或无法正常使用。本文为你揭秘常见误区。\n\n## 常见误区\n\n### 1. 定向流量包使用误区\n- 误以为所有应用都免流\n- 不知道免流范围限制\n- 忽略免流条件要求\n\n### 2. 流量包叠加误区\n- 认为可以无限叠加\n- 不了解叠加规则\n- 错误计算有效期\n\n### 3. 流量包转赠误区\n- 不知道转赠限制\n- 忽略转赠手续费\n- 不了解转赠条件\n\n## 正确使用方法\n1. 仔细阅读使用说明\n2. 了解免流范围\n3. 合理规划使用时间\n4. 及时关注流量消耗\n\n避免这些误区,让你的流量包发挥最大价值!",
+      "cover_image_url": "https://example.com/images/traffic_misconceptions.jpg",
+      "type": "TUTORIAL",
+      "status": "PUBLISHED",
+      "view_count": 12300,
+      "like_count": 789,
+      "comment_count": 156,
+      "share_count": 234,
+      "hot_score": 1450.8
+    },
+    {
+      "title": "流量包投资理财新思路,让闲置流量变现金",
+      "content": "流量包不仅能满足日常使用需求,还能成为一种投资理财工具。本文分享流量包投资的新思路。\n\n## 投资策略\n\n### 1. 批量购买策略\n- 关注运营商促销活动\n- 批量购买享受优惠价格\n- 合理分配使用时间\n\n### 2. 转售策略\n- 购买热门流量包\n- 在需求高峰期转售\n- 赚取差价利润\n\n### 3. 互换策略\n- 参与流量包互换\n- 获得等值或更高价值\n- 扩大使用范围\n\n## 风险控制\n1. 了解市场行情\n2. 控制投资比例\n3. 及时止损\n4. 分散投资\n\n让闲置的流量包为你创造额外收益!",
+      "cover_image_url": "https://example.com/images/traffic_investment.jpg",
+      "type": "SHARE",
+      "status": "PUBLISHED",
+      "view_count": 8765,
+      "like_count": 567,
+      "comment_count": 123,
+      "share_count": 189,
+      "hot_score": 980.5
+    },
+    {
+      "title": "5G流量包 vs 4G流量包,到底选哪个?",
+      "content": "5G网络普及后,用户面临选择5G流量包还是4G流量包的困扰。本文为你详细对比分析。\n\n## 速度对比\n- 5G: 理论速度可达1Gbps\n- 4G: 理论速度可达100Mbps\n- 实际使用中5G速度明显更快\n\n## 覆盖范围对比\n- 5G: 覆盖范围相对较小\n- 4G: 覆盖范围更广\n- 4G网络更稳定\n\n## 价格对比\n- 5G流量包价格较高\n- 4G流量包价格相对便宜\n- 5G性价比逐渐提升\n\n## 使用场景建议\n1. 城市用户推荐5G\n2. 农村用户推荐4G\n3. 商务用户推荐5G\n4. 学生用户推荐4G\n\n根据自身需求选择最适合的流量包!",
+      "cover_image_url": "https://example.com/images/5g_vs_4g.jpg",
+      "type": "TUTORIAL",
+      "status": "PUBLISHED",
+      "view_count": 15600,
+      "like_count": 890,
+      "comment_count": 178,
+      "share_count": 345,
+      "hot_score": 1750.2
+    },
+    {
+      "title": "流量包过期处理指南,避免浪费每一MB",
+      "content": "流量包即将过期怎么办?本文教你如何处理即将过期的流量包,避免浪费。\n\n## 过期前处理方案\n\n### 1. 加速使用\n- 下载大文件\n- 观看高清视频\n- 进行视频通话\n- 使用热点分享\n\n### 2. 转赠他人\n- 转赠给家人朋友\n- 参与社区转赠活动\n- 注意转赠限制条件\n\n### 3. 申请延期\n- 联系客服申请延期\n- 提供合理延期理由\n- 了解延期政策\n\n## 过期后处理方案\n1. 检查是否可恢复\n2. 申请流量包补偿\n3. 购买新流量包\n4. 总结经验教训\n\n合理处理过期流量包,让每一MB都不浪费!",
+      "cover_image_url": "https://example.com/images/expired_traffic.jpg",
+      "type": "TUTORIAL",
+      "status": "PUBLISHED",
+      "view_count": 9876,
+      "like_count": 654,
+      "comment_count": 145,
+      "share_count": 267,
+      "hot_score": 1120.8
+    },
+    {
+      "title": "流量包团购活动火热招募中",
+      "content": "社区组织流量包团购活动,人多力量大,享受更优惠的价格!欢迎大家一起参与。\n\n## 团购优势\n- 享受批发价格\n- 降低个人成本\n- 获得更多优惠\n- 扩大选择范围\n\n## 参与方式\n1. 加入团购群\n2. 选择心仪流量包\n3. 支付团购费用\n4. 等待统一发货\n\n## 团购规则\n- 最低成团人数: 10人\n- 支付方式: 微信/支付宝\n- 发货时间: 成团后3-5个工作日\n- 售后服务: 7天无理由退换\n\n## 当前团购项目\n- 移动100GB流量包: 原价199元,团购价159元\n- 联通200GB流量包: 原价299元,团购价239元\n- 电信150GB流量包: 原价249元,团购价199元\n\n快来加入团购,享受超值优惠!",
+      "cover_image_url": "https://example.com/images/group_buying.jpg",
+      "type": "ACTIVITY",
+      "status": "PUBLISHED",
+      "view_count": 11200,
+      "like_count": 789,
+      "comment_count": 167,
+      "share_count": 298,
+      "hot_score": 1280.5
+    },
+    {
+      "title": "流量包使用数据分析报告",
+      "content": "基于社区用户使用数据,我们分析了流量包的使用趋势和用户偏好。\n\n## 使用趋势分析\n\n### 1. 流量消耗趋势\n- 视频流量占比最高(45%)\n- 社交应用流量次之(25%)\n- 游戏流量占比(15%)\n- 其他应用流量(15%)\n\n### 2. 使用时间分布\n- 晚上8-10点使用高峰\n- 周末使用量明显增加\n- 节假日使用量翻倍\n\n### 3. 用户偏好分析\n- 年轻用户偏好大流量包\n- 中年用户偏好定向流量包\n- 老年用户偏好基础流量包\n\n## 优化建议\n1. 根据使用习惯选择流量包\n2. 合理规划使用时间\n3. 关注流量消耗统计\n4. 及时调整使用策略\n\n数据驱动,让流量使用更高效!",
+      "cover_image_url": "https://example.com/images/data_analysis.jpg",
+      "type": "SHARE",
+      "status": "PUBLISHED",
+      "view_count": 7654,
+      "like_count": 456,
+      "comment_count": 89,
+      "share_count": 156,
+      "hot_score": 850.3
+    },
+    {
+      "title": "流量包售后服务全攻略",
+      "content": "购买流量包后遇到问题怎么办?本文为你详细介绍流量包的售后服务流程。\n\n## 常见问题及解决方案\n\n### 1. 流量包无法使用\n- 检查网络连接\n- 确认流量包状态\n- 联系客服处理\n\n### 2. 流量消耗异常\n- 查看使用明细\n- 检查应用权限\n- 申请流量补偿\n\n### 3. 流量包过期问题\n- 申请延期使用\n- 申请退款处理\n- 购买新流量包\n\n## 售后服务渠道\n1. 在线客服: 7×24小时服务\n2. 电话客服: 400-xxx-xxxx\n3. 微信客服: 关注官方公众号\n4. 社区客服: 在社区发帖求助\n\n## 服务承诺\n- 响应时间: 2小时内\n- 处理时间: 24小时内\n- 满意度: 95%以上\n\n完善的售后服务,让你购买无忧!",
+      "cover_image_url": "https://example.com/images/customer_service.jpg",
+      "type": "TUTORIAL",
+      "status": "PUBLISHED",
+      "view_count": 6543,
+      "like_count": 345,
+      "comment_count": 78,
+      "share_count": 123,
+      "hot_score": 720.7
+    },
+    {
+      "title": "流量包行业发展趋势预测",
+      "content": "随着5G技术的发展和用户需求的变化,流量包行业正迎来新的发展机遇。\n\n## 技术发展趋势\n\n### 1. 5G技术普及\n- 5G网络覆盖范围扩大\n- 5G流量包价格下降\n- 5G应用场景丰富\n\n### 2. 物联网应用\n- 智能家居流量需求\n- 车联网流量需求\n- 工业物联网流量需求\n\n### 3. 边缘计算\n- 降低流量消耗\n- 提升用户体验\n- 优化网络资源\n\n## 市场发展趋势\n1. 个性化定制服务\n2. 智能化推荐系统\n3. 生态化运营模式\n4. 国际化市场拓展\n\n## 用户需求变化\n- 更注重使用体验\n- 更关注性价比\n- 更重视服务质量\n- 更追求个性化\n\n把握行业趋势,享受更好的流量服务!",
+      "cover_image_url": "https://example.com/images/industry_trends.jpg",
+      "type": "SHARE",
+      "status": "PUBLISHED",
+      "view_count": 5432,
+      "like_count": 234,
+      "comment_count": 56,
+      "share_count": 89,
+      "hot_score": 610.4
+    }
+  ],
+  "community_tasks": [
+    {
+      "title": "20GB抖音流量包互换",
+      "description": "本人有20GB抖音定向流量包,有效期还有30天,希望换等值的腾讯视频流量包或其他通用流量包。要求对方流量包有效期不少于20天。",
+      "task_type": "TRAFFIC_EXCHANGE",
+      "status": "OPEN",
+      "reward_info": "20GB抖音定向流量包",
+      "contact_info": "微信: douyin_user_123",
+      "expiry_at": "2024-12-31T23:59:59"
+    },
+    {
+      "title": "200GB腾讯视频大流量包互换",
+      "description": "腾讯视频200GB大流量包,还有25天有效期,希望换等值的爱奇艺或优酷流量包。可以接受部分现金补偿。",
+      "task_type": "TRAFFIC_EXCHANGE",
+      "status": "OPEN",
+      "reward_info": "200GB腾讯视频流量包",
+      "contact_info": "QQ: 123456789",
+      "expiry_at": "2024-12-25T23:59:59"
+    },
+    {
+      "title": "流量换会员服务",
+      "description": "本人有50GB通用流量包,希望换一个月的腾讯视频VIP会员。流量包有效期还有40天,可以接受部分现金补偿。",
+      "task_type": "TRAFFIC_MEMBERSHIP",
+      "status": "OPEN",
+      "reward_info": "50GB通用流量包",
+      "contact_info": "电话: 138****5678",
+      "expiry_at": "2024-12-20T23:59:59"
+    },
+    {
+      "title": "闲置手机流量包转让",
+      "description": "手头有多个闲置的流量包,包括移动、联通、电信的都有,希望打包转让。价格优惠,支持单买或打包购买。",
+      "task_type": "SECOND_HAND",
+      "status": "OPEN",
+      "reward_info": "多个运营商流量包",
+      "contact_info": "微信: phone_seller_456",
+      "expiry_at": "2024-12-15T23:59:59"
+    },
+    {
+      "title": "流量包优惠券分享",
+      "description": "手头有多张流量包购买优惠券,可以帮别人代购流量包,享受优惠价格。支持各大运营商流量包代购。",
+      "task_type": "COUPON_EXCHANGE",
+      "status": "OPEN",
+      "reward_info": "流量包购买优惠券",
+      "contact_info": "微信: coupon_helper_789",
+      "expiry_at": "2024-12-10T23:59:59"
+    },
+    {
+      "title": "流量互助群招募",
+      "description": "建立一个流量互助群,群内成员可以互相帮助,分享流量包信息,组织团购活动。欢迎有流量包需求的朋友加入。",
+      "task_type": "TRAFFIC_HELP",
+      "status": "OPEN",
+      "reward_info": "加入流量互助群",
+      "contact_info": "微信群二维码",
+      "expiry_at": "2024-12-05T23:59:59"
+    },
+    {
+      "title": "100GB移动流量包互换",
+      "description": "移动100GB全国流量包,还有35天有效期,希望换等值的联通或电信流量包。要求对方流量包有效期不少于30天。",
+      "task_type": "TRAFFIC_EXCHANGE",
+      "status": "IN_PROGRESS",
+      "reward_info": "100GB移动全国流量包",
+      "contact_info": "微信: mobile_user_999",
+      "expiry_at": "2024-12-30T23:59:59"
+    },
+    {
+      "title": "爱奇艺会员换流量包",
+      "description": "本人有爱奇艺黄金VIP会员,还有2个月有效期,希望换等值的流量包。可以接受各种运营商的流量包。",
+      "task_type": "TRAFFIC_MEMBERSHIP",
+      "status": "COMPLETED",
+      "reward_info": "2个月爱奇艺黄金VIP",
+      "contact_info": "QQ: 987654321",
+      "expiry_at": "2024-11-30T23:59:59"
+    },
+    {
+      "title": "300GB移动5G流量包转让",
+      "description": "移动5G大流量包,还有45天有效期,因工作调动不再需要。希望转让给有需要的朋友,价格可议。",
+      "task_type": "SECOND_HAND",
+      "status": "OPEN",
+      "reward_info": "300GB移动5G流量包",
+      "contact_info": "微信: mobile5g_user_888",
+      "expiry_at": "2024-12-28T23:59:59"
+    },
+    {
+      "title": "优酷会员换腾讯视频流量包",
+      "description": "优酷黄金VIP会员,还有3个月有效期,希望换等值的腾讯视频定向流量包。可以接受部分现金补偿。",
+      "task_type": "TRAFFIC_MEMBERSHIP",
+      "status": "OPEN",
+      "reward_info": "3个月优酷黄金VIP",
+      "contact_info": "电话: 139****8888",
+      "expiry_at": "2024-12-20T23:59:59"
+    },
+    {
+      "title": "流量包代购服务",
+      "description": "提供各大运营商流量包代购服务,享受内部优惠价格。支持移动、联通、电信全系列流量包。",
+      "task_type": "COUPON_EXCHANGE",
+      "status": "OPEN",
+      "reward_info": "流量包代购服务",
+      "contact_info": "微信: traffic_agent_999",
+      "expiry_at": "2024-12-31T23:59:59"
+    },
+    {
+      "title": "50GB联通流量包互换",
+      "description": "联通50GB全国流量包,还有25天有效期,希望换等值的移动或电信流量包。要求对方流量包有效期不少于20天。",
+      "task_type": "TRAFFIC_EXCHANGE",
+      "status": "OPEN",
+      "reward_info": "50GB联通全国流量包",
+      "contact_info": "QQ: 555666777",
+      "expiry_at": "2024-12-15T23:59:59"
+    },
+    {
+      "title": "流量包使用技巧分享",
+      "description": "分享流量包使用技巧和节省流量的方法,帮助大家更好地使用流量包。欢迎有经验的朋友一起交流。",
+      "task_type": "TRAFFIC_HELP",
+      "status": "OPEN",
+      "reward_info": "流量包使用技巧分享",
+      "contact_info": "微信群: 流量技巧交流群",
+      "expiry_at": "2024-12-25T23:59:59"
+    },
+    {
+      "title": "150GB电信流量包团购",
+      "description": "组织电信150GB流量包团购活动,人数越多价格越优惠。目前已有8人参与,还差2人即可成团。",
+      "task_type": "TRAFFIC_HELP",
+      "status": "IN_PROGRESS",
+      "reward_info": "150GB电信流量包团购",
+      "contact_info": "微信: group_buy_leader",
+      "expiry_at": "2024-12-10T23:59:59"
+    },
+    {
+      "title": "流量包投资咨询",
+      "description": "提供流量包投资理财咨询服务,帮助大家合理规划流量包购买和使用,实现流量包价值最大化。",
+      "task_type": "TRAFFIC_HELP",
+      "status": "OPEN",
+      "reward_info": "流量包投资咨询服务",
+      "contact_info": "微信: traffic_investor",
+      "expiry_at": "2024-12-30T23:59:59"
+    },
+    {
+      "title": "100GB移动流量包+50GB联通流量包",
+      "description": "手头有移动100GB和联通50GB流量包,希望打包转让或分别转让。价格优惠,支持单买或打包购买。",
+      "task_type": "SECOND_HAND",
+      "status": "OPEN",
+      "reward_info": "100GB移动+50GB联通流量包",
+      "contact_info": "微信: multi_traffic_seller",
+      "expiry_at": "2024-12-18T23:59:59"
+    },
+    {
+      "title": "流量包使用数据分析",
+      "description": "提供流量包使用数据分析服务,帮助用户了解自己的流量使用习惯,优化流量包选择和使用策略。",
+      "task_type": "TRAFFIC_HELP",
+      "status": "OPEN",
+      "reward_info": "流量包使用数据分析服务",
+      "contact_info": "微信: data_analyst_traffic",
+      "expiry_at": "2024-12-22T23:59:59"
+    }
+  ],
+  "comments": [
+    {
+      "content": "这个活动真的很划算,我已经买了两个流量包了!",
+      "parent_id": null
+    },
+    {
+      "content": "请问这个活动持续到什么时候?",
+      "parent_id": null
+    },
+    {
+      "content": "活动持续到月底,还有半个月时间",
+      "parent_id": null
+    },
+    {
+      "content": "感谢分享,这些技巧很实用!",
+      "parent_id": null
+    },
+    {
+      "content": "我也试过这些方法,确实能省不少流量",
+      "parent_id": null
+    },
+    {
+      "content": "请问省流量模式在哪里开启?",
+      "parent_id": null
+    },
+    {
+      "content": "在设置-移动网络-流量管理里面可以找到",
+      "parent_id": null
+    },
+    {
+      "content": "双十一活动确实很给力,我已经抢到了!",
+      "parent_id": null
+    },
+    {
+      "content": "请问双十一活动什么时候开始?",
+      "parent_id": null
+    },
+    {
+      "content": "11月1日就开始预售了,现在就可以关注",
+      "parent_id": null
+    },
+    {
+      "content": "流量包投资这个想法很新颖,值得尝试",
+      "parent_id": null
+    },
+    {
+      "content": "5G和4G的选择确实让人纠结",
+      "parent_id": null
+    },
+    {
+      "content": "我觉得还是看个人需求,城市用5G,农村用4G",
+      "parent_id": null
+    },
+    {
+      "content": "流量包过期处理很实用,收藏了",
+      "parent_id": null
+    },
+    {
+      "content": "团购活动还有名额吗?我想参加",
+      "parent_id": null
+    },
+    {
+      "content": "数据分析报告很有价值,学到了很多",
+      "parent_id": null
+    },
+    {
+      "content": "售后服务确实很重要,选择平台时要考虑",
+      "parent_id": null
+    },
+    {
+      "content": "行业趋势分析很专业,期待更多分享",
+      "parent_id": null
+    }
+  ],
+  "likes": [
+    {
+      "user_id": "user1",
+      "article_id": "article1"
+    },
+    {
+      "user_id": "user2", 
+      "article_id": "article1"
+    },
+    {
+      "user_id": "user3",
+      "article_id": "article2"
+    },
+    {
+      "user_id": "user1",
+      "article_id": "article3"
+    },
+    {
+      "user_id": "user4",
+      "article_id": "article3"
+    },
+    {
+      "user_id": "user5",
+      "article_id": "article4"
+    },
+    {
+      "user_id": "user6",
+      "article_id": "article4"
+    },
+    {
+      "user_id": "user7",
+      "article_id": "article5"
+    },
+    {
+      "user_id": "user8",
+      "article_id": "article5"
+    },
+    {
+      "user_id": "user9",
+      "article_id": "article6"
+    },
+    {
+      "user_id": "user10",
+      "article_id": "article6"
+    },
+    {
+      "user_id": "user11",
+      "article_id": "article7"
+    },
+    {
+      "user_id": "user12",
+      "article_id": "article7"
+    },
+    {
+      "user_id": "user13",
+      "article_id": "article8"
+    },
+    {
+      "user_id": "user14",
+      "article_id": "article8"
+    },
+    {
+      "user_id": "user15",
+      "article_id": "article9"
+    },
+    {
+      "user_id": "user16",
+      "article_id": "article9"
+    },
+    {
+      "user_id": "user17",
+      "article_id": "article10"
+    },
+    {
+      "user_id": "user18",
+      "article_id": "article10"
+    },
+    {
+      "user_id": "user19",
+      "article_id": "article11"
+    },
+    {
+      "user_id": "user20",
+      "article_id": "article11"
+    },
+    {
+      "user_id": "user21",
+      "article_id": "article12"
+    },
+    {
+      "user_id": "user22",
+      "article_id": "article12"
+    },
+    {
+      "user_id": "user23",
+      "article_id": "article13"
+    },
+    {
+      "user_id": "user24",
+      "article_id": "article13"
+    },
+    {
+      "user_id": "user25",
+      "article_id": "article14"
+    },
+    {
+      "user_id": "user26",
+      "article_id": "article14"
+    },
+    {
+      "user_id": "user27",
+      "article_id": "article15"
+    },
+    {
+      "user_id": "user28",
+      "article_id": "article15"
+    },
+    {
+      "user_id": "user29",
+      "article_id": "article16"
+    },
+    {
+      "user_id": "user30",
+      "article_id": "article16"
+    }
+  ]
+}

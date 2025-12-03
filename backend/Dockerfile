@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.11
 
 ENV PYTHONUNBUFFERED=1
 
@@ -35,9 +35,9 @@ COPY ./pyproject.toml ./uv.lock ./alembic.ini /app/
 
 COPY ./app /app/app
 
-# Sync the project
+# Sync the project and install to virtual environment
 # Ref: https://docs.astral.sh/uv/guides/integration/docker/#intermediate-layers
 RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync
+    uv sync --frozen
 
 CMD ["fastapi", "run", "--workers", "4", "app/main.py"]

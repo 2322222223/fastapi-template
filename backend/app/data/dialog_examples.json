@@ -1,0 +1,47 @@
+[
+  {
+    "name": "连续签到即送好礼",
+    "priority": 1,
+    "trigger_event": "CUSTOM",
+    "dialog_type": "PROMOTION_BANNER",
+    "payload": "",
+    "buttons": "[{\"text\":\"去签到\",\"action_uri\":\"myapp://navigation/check_in\",\"action_type\":\"navigate\"},{\"text\":\"稍后再说\",\"action_uri\":\"dismiss\",\"action_type\":\"dismiss\"}]",
+    "start_time": "2025-09-16T02:37:41.917Z",
+    "end_time": "2025-12-31T23:59:59.999Z",
+    "is_active": true,
+    "target_audience": "ALL_USERS",
+    "display_frequency": "ALWAYS",
+    "max_display_count": 0,
+    "description": "连续签到7天,即送可选平台的会员卡,更有机会抽取豪礼!"
+  },
+  {
+    "name": "新用户专享优惠",
+    "priority": 2,
+    "trigger_event": "APP_LAUNCH",
+    "dialog_type": "PROMOTION_BANNER",
+    "payload": "",
+    "buttons": "[{\"text\":\"立即领取\",\"action_uri\":\"myapp://navigation/coupons\",\"action_type\":\"navigate\"},{\"text\":\"稍后再说\",\"action_uri\":\"dismiss\",\"action_type\":\"dismiss\"}]",
+    "start_time": "2025-09-16T02:37:41.917Z",
+    "end_time": "2025-12-31T23:59:59.999Z",
+    "is_active": true,
+    "target_audience": "NEW_USERS",
+    "display_frequency": "ONCE",
+    "max_display_count": 1,
+    "description": "新用户注册即送100积分，更有专属优惠券等你来拿！"
+  },
+  {
+    "name": "会员升级提醒",
+    "priority": 3,
+    "trigger_event": "ENTER_STORE_PAGE",
+    "dialog_type": "PROMOTION_BANNER",
+    "payload": "",
+    "buttons": "[{\"text\":\"立即升级\",\"action_uri\":\"myapp://navigation/membership\",\"action_type\":\"navigate\"},{\"text\":\"稍后再说\",\"action_uri\":\"dismiss\",\"action_type\":\"dismiss\"}]",
+    "start_time": "2025-09-16T02:37:41.917Z",
+    "end_time": "2025-12-31T23:59:59.999Z",
+    "is_active": true,
+    "target_audience": "REGULAR_USERS",
+    "display_frequency": "DAILY",
+    "max_display_count": 3,
+    "description": "升级会员享受更多特权，积分翻倍，专属客服，还有更多惊喜等你发现！"
+  }
+]

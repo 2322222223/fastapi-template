@@ -10,7 +10,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - "80:80"
+      - "8888:80"
       - "8090:8080"
     # Duplicate the command from docker-compose.yml to add --api.insecure=true
     command:
@@ -54,32 +54,30 @@ services:
     restart: "no"
     ports:
       - "8080:8080"
+  prestart:
+    restart: "no"
+    volumes:
+      - ./backend/app:/app/app
+      - ./backend/alembic.ini:/app/alembic.ini
+      - ./backend/scripts:/app/scripts
+
 
   backend:
     restart: "no"
     ports:
-      - "8000:8000"
+      - "8889:8000"
     build:
       context: ./backend
-    # command: sleep infinity  # Infinite loop to keep container alive doing nothing
     command:
       - fastapi
       - run
+      - --host
+      - "0.0.0.0"
       - --reload
       - "app/main.py"
-    develop:
-      watch:
-        - path: ./backend
-          action: sync
-          target: /app
-          ignore:
-            - ./backend/.venv
-            - .venv
-        - path: ./backend/pyproject.toml
-          action: rebuild
-    # TODO: remove once coverage is done locally
     volumes:
-      - ./backend/htmlcov:/app/htmlcov
+      - ./backend/app:/app/app  # 只挂载应用代码
+      - ./backend/alembic.ini:/app/alembic.ini  # 挂载alembic配置
     environment:
       SMTP_HOST: "mailcatcher"
       SMTP_PORT: "1025"
@@ -95,11 +93,11 @@ services:
   frontend:
     restart: "no"
     ports:
-      - "5173:80"
+      - "7771:80"
     build:
       context: ./frontend
       args:
-        - VITE_API_URL=http://localhost:8000
+        - VITE_API_URL=http://localhost:8889
         - NODE_ENV=development
 
   playwright:
@@ -107,7 +105,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile.playwright
       args:
-        - VITE_API_URL=http://backend:8000
+        - VITE_API_URL=http://backend:8889
         - NODE_ENV=production
     ipc: host
     depends_on:
@@ -116,7 +114,7 @@ services:
     env_file:
       - .env
     environment:
-      - VITE_API_URL=http://backend:8000
+      - VITE_API_URL=http://backend:8889
       - MAILCATCHER_HOST=http://mailcatcher:1080
       # For the reports when run locally
       - PLAYWRIGHT_HTML_HOST=0.0.0.0

@@ -35,7 +35,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str = secrets.token_urlsafe(32)
     # 60 minutes * 24 hours * 8 days = 8 days
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8
-    FRONTEND_HOST: str = "http://localhost:5173"
+    FRONTEND_HOST: str = "http://localhost:7771"
     ENVIRONMENT: Literal["local", "staging", "production"] = "local"
 
     BACKEND_CORS_ORIGINS: Annotated[
@@ -94,6 +94,12 @@ class Settings(BaseSettings):
     EMAIL_TEST_USER: EmailStr = "test@example.com"
     FIRST_SUPERUSER: EmailStr
     FIRST_SUPERUSER_PASSWORD: str
+    
+    # 文件存储配置
+    UPLOAD_DIR: str = "uploads"
+    AVATAR_UPLOAD_DIR: str = "uploads/avatars"
+    MAX_UPLOAD_SIZE: int = 5 * 1024 * 1024  # 5MB
+    ALLOWED_IMAGE_EXTENSIONS: list[str] = [".jpg", ".jpeg", ".png", ".gif", ".webp"]
 
     def _check_default_secret(self, var_name: str, value: str | None) -> None:
         if value == "changethis":

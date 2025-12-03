@@ -1,0 +1,107 @@
+[
+  {
+    "user_phone_pattern": "15738888644",
+    "membership_benefits": [
+      {
+        "benefit_name": "网易云音乐会员",
+        "provider_id": "NETEASE_MUSIC",
+        "description": "畅享无损音质",
+        "total_duration_days": 3,
+        "activation_date": "2025-01-15T00:00:00",
+        "expiration_date": "2025-01-18T00:00:00",
+        "status": "ACTIVE",
+        "ui_config_json": "{\"card_color\": \"pink\", \"logo_color\": \"red\"}"
+      },
+      {
+        "benefit_name": "腾讯视频会员",
+        "provider_id": "TENCENT_VIDEO",
+        "description": "免广告观影",
+        "total_duration_days": 1,
+        "activation_date": "2025-01-10T00:00:00",
+        "expiration_date": "2025-01-11T00:00:00",
+        "status": "EXPIRED",
+        "ui_config_json": "{\"card_color\": \"purple\", \"logo_color\": \"green\"}"
+      },
+      {
+        "benefit_name": "爱奇艺会员",
+        "provider_id": "IQIYI",
+        "description": "超清画质体验",
+        "total_duration_days": 7,
+        "activation_date": "2025-01-12T00:00:00",
+        "expiration_date": "2025-01-19T00:00:00",
+        "status": "ACTIVE",
+        "ui_config_json": "{\"card_color\": \"green\", \"logo_color\": \"blue\"}"
+      },
+      {
+        "benefit_name": "QQ音乐会员",
+        "provider_id": "QQ_MUSIC",
+        "description": "独家音乐体验",
+        "total_duration_days": 15,
+        "activation_date": "2025-01-05T00:00:00",
+        "expiration_date": "2025-01-20T00:00:00",
+        "status": "ACTIVE",
+        "ui_config_json": "{\"card_color\": \"blue\", \"logo_color\": \"yellow\"}"
+      }
+    ]
+  },
+  {
+    "user_phone_pattern": "15738888644",
+    "membership_benefits": [
+      {
+        "benefit_name": "优酷会员",
+        "provider_id": "YOUKU",
+        "description": "高清无广告",
+        "total_duration_days": 30,
+        "activation_date": "2025-01-01T00:00:00",
+        "expiration_date": "2025-01-31T00:00:00",
+        "status": "ACTIVE",
+        "ui_config_json": "{\"card_color\": \"orange\", \"logo_color\": \"white\"}"
+      },
+      {
+        "benefit_name": "哔哩哔哩大会员",
+        "provider_id": "BILIBILI",
+        "description": "1080P高清",
+        "total_duration_days": 7,
+        "activation_date": "2025-01-10T00:00:00",
+        "expiration_date": "2025-01-17T00:00:00",
+        "status": "ACTIVE",
+        "ui_config_json": "{\"card_color\": \"pink\", \"logo_color\": \"blue\"}"
+      }
+    ]
+  },
+  {
+    "user_phone_pattern": "15738888644",
+    "membership_benefits": [
+      {
+        "benefit_name": "芒果TV会员",
+        "provider_id": "MANGOTV",
+        "description": "独播内容抢先看",
+        "total_duration_days": 14,
+        "activation_date": "2025-01-08T00:00:00",
+        "expiration_date": "2025-01-22T00:00:00",
+        "status": "ACTIVE",
+        "ui_config_json": "{\"card_color\": \"yellow\", \"logo_color\": \"orange\"}"
+      },
+      {
+        "benefit_name": "腾讯体育会员",
+        "provider_id": "TENCENT_SPORTS",
+        "description": "体育赛事直播",
+        "total_duration_days": 3,
+        "activation_date": "2025-01-13T00:00:00",
+        "expiration_date": "2025-01-16T00:00:00",
+        "status": "ACTIVE",
+        "ui_config_json": "{\"card_color\": \"green\", \"logo_color\": \"white\"}"
+      },
+      {
+        "benefit_name": "网易云音乐会员",
+        "provider_id": "NETEASE_MUSIC",
+        "description": "畅享无损音质",
+        "total_duration_days": 1,
+        "activation_date": "2025-01-14T00:00:00",
+        "expiration_date": "2025-01-15T00:00:00",
+        "status": "EXPIRED",
+        "ui_config_json": "{\"card_color\": \"pink\", \"logo_color\": \"red\"}"
+      }
+    ]
+  }
+]

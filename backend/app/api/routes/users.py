@@ -1,7 +1,7 @@
 import uuid
 from typing import Any
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, UploadFile, File
 from sqlmodel import col, delete, func, select
 
 from app import crud
@@ -24,7 +24,12 @@ from app.models import (
     UserUpdate,
     UserUpdateMe,
 )
-from app.utils import generate_new_account_email, send_email
+from app.utils import (
+    generate_new_account_email,
+    send_email,
+    save_avatar_file,
+    delete_avatar_file,
+)
 
 router = APIRouter(prefix="/users", tags=["users"])
 
@@ -89,7 +94,14 @@ def update_user_me(
             raise HTTPException(
                 status_code=409, detail="User with this email already exists"
             )
+    
     user_data = user_in.model_dump(exclude_unset=True)
+    
+    # 如果更新了头像URL，删除旧的头像文件
+    if "avatar_url" in user_data and user_data["avatar_url"] != current_user.avatar_url:
+        if current_user.avatar_url:
+            delete_avatar_file(current_user.avatar_url)
+    
     current_user.sqlmodel_update(user_data)
     session.add(current_user)
     session.commit()
@@ -219,8 +231,70 @@ def delete_user(
         raise HTTPException(
             status_code=403, detail="Super users are not allowed to delete themselves"
         )
+    # 删除用户头像文件
+    if user.avatar_url:
+        delete_avatar_file(user.avatar_url)
     statement = delete(Item).where(col(Item.owner_id) == user_id)
     session.exec(statement)  # type: ignore
     session.delete(user)
     session.commit()
     return Message(message="User deleted successfully")
+
+
+@router.post("/me/avatar", response_model=UserPublic)
+async def upload_avatar(
+    *,
+    session: SessionDep,
+    current_user: CurrentUser,
+    file: UploadFile = File(...),
+) -> Any:
+    """
+    上传用户头像
+    """
+    try:
+        # 删除旧头像
+        if current_user.avatar_url:
+            delete_avatar_file(current_user.avatar_url)
+        
+        # 保存新头像
+        avatar_path = await save_avatar_file(file, current_user.id)
+        
+        # 生成完整的URL（使用静态文件服务的路径）
+        avatar_url = f"/{avatar_path}"
+        
+        # 更新用户头像URL
+        current_user.avatar_url = avatar_url
+        session.add(current_user)
+        session.commit()
+        session.refresh(current_user)
+        
+        return current_user
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"上传头像失败: {str(e)}")
+
+
+@router.delete("/me/avatar", response_model=UserPublic)
+def delete_avatar(
+    *,
+    session: SessionDep,
+    current_user: CurrentUser,
+) -> Any:
+    """
+    删除用户头像
+    """
+    try:
+        # 删除头像文件
+        if current_user.avatar_url:
+            delete_avatar_file(current_user.avatar_url)
+        
+        # 清空头像URL
+        current_user.avatar_url = None
+        session.add(current_user)
+        session.commit()
+        session.refresh(current_user)
+        
+        return current_user
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"删除头像失败: {str(e)}")

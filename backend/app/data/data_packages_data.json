@@ -1,0 +1,98 @@
+[
+  {
+    "user_phone_pattern": "15738888644",
+    "data_packages": [
+      {
+        "package_name": "通用流量",
+        "package_type": "GENERAL",
+        "total_mb": 5120,
+        "used_mb": 2150,
+        "expiration_date": "2025-07-01T00:00:00",
+        "is_shared": false,
+        "status": "ACTIVE"
+      },
+      {
+        "package_name": "通用流量(连续包月)",
+        "package_type": "GENERAL",
+        "total_mb": 20480,
+        "used_mb": 11059,
+        "expiration_date": "2026-10-17T00:00:00",
+        "is_shared": true,
+        "status": "ACTIVE"
+      },
+      {
+        "package_name": "抖音定向流量包",
+        "package_type": "APP_SPECIFIC",
+        "total_mb": 5120,
+        "used_mb": 2150,
+        "expiration_date": "2025-06-24T00:00:00",
+        "is_shared": false,
+        "status": "ACTIVE"
+      },
+      {
+        "package_name": "腾讯定向流量包",
+        "package_type": "APP_SPECIFIC",
+        "total_mb": 2048,
+        "used_mb": 819,
+        "expiration_date": "2025-07-11T00:00:00",
+        "is_shared": true,
+        "status": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "user_phone_pattern": "15738888645",
+    "data_packages": [
+      {
+        "package_name": "通用流量包",
+        "package_type": "GENERAL",
+        "total_mb": 10240,
+        "used_mb": 5120,
+        "expiration_date": "2025-08-15T00:00:00",
+        "is_shared": false,
+        "status": "ACTIVE"
+      },
+      {
+        "package_name": "微信定向流量包",
+        "package_type": "APP_SPECIFIC",
+        "total_mb": 3072,
+        "used_mb": 1536,
+        "expiration_date": "2025-09-01T00:00:00",
+        "is_shared": false,
+        "status": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "user_phone_pattern": "15738888646",
+    "data_packages": [
+      {
+        "package_name": "5G流量包",
+        "package_type": "GENERAL",
+        "total_mb": 30720,
+        "used_mb": 20480,
+        "expiration_date": "2025-12-31T00:00:00",
+        "is_shared": true,
+        "status": "ACTIVE"
+      },
+      {
+        "package_name": "支付宝定向流量包",
+        "package_type": "APP_SPECIFIC",
+        "total_mb": 1024,
+        "used_mb": 512,
+        "expiration_date": "2025-08-20T00:00:00",
+        "is_shared": false,
+        "status": "ACTIVE"
+      },
+      {
+        "package_name": "淘宝定向流量包",
+        "package_type": "APP_SPECIFIC",
+        "total_mb": 2048,
+        "used_mb": 1024,
+        "expiration_date": "2025-09-10T00:00:00",
+        "is_shared": false,
+        "status": "ACTIVE"
+      }
+    ]
+  }
+]
