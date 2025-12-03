@@ -80,6 +80,10 @@ class User(UserBase, table=True):
     addresses: list["Address"] = Relationship(back_populates="user", cascade_delete=True)
     # 积分商城关系
     points_product_exchanges: list["PointsProductExchange"] = Relationship(back_populates="user", cascade_delete=True)
+    # 盲盒抽奖关系
+    recharge_orders: list["RechargeOrder"] = Relationship(back_populates="user", cascade_delete=True)
+    blind_boxes: list["UserBlindBox"] = Relationship(back_populates="user", cascade_delete=True)
+    blind_box_prizes: list["BlindBoxUserPrize"] = Relationship(back_populates="user", cascade_delete=True)
 
 
 # Properties to return via API, id is always required
@@ -208,6 +212,8 @@ class BusinessDistrict(BusinessDistrictBase, table=True):
     region_id: uuid.UUID = Field(foreign_key="region.id", nullable=False)
     region: Optional[Region] = Relationship(back_populates="business_districts")
     stores: list["Store"] = Relationship(back_populates="business_district")
+    # 充值订单关系
+    recharge_orders: list["RechargeOrder"] = Relationship(back_populates="business_district")
 
 
 class BusinessDistrictPublic(BusinessDistrictBase):
@@ -2407,3 +2413,296 @@ class PointsProductExchangesPublic(SQLModel):
     total: int
     page: int
     page_size: int
+
+
+# ==================== 盲盒抽奖系统 ====================
+
+# 充值订单状态枚举
+class RechargeOrderStatus(str, Enum):
+    PENDING = "pending"  # 待支付
+    PROCESSING = "processing"  # 处理中
+    SUCCESS = "success"  # 成功
+    FAILED = "failed"  # 失败
+    CANCELLED = "cancelled"  # 已取消
+
+
+# 充值类型枚举
+class RechargeType(str, Enum):
+    MOBILE = "mobile"  # 话费充值
+    DATA = "data"  # 流量充值
+
+
+# 盲盒状态枚举
+class BlindBoxStatus(str, Enum):
+    UNOPENED = "unopened"  # 未开启
+    OPENED = "opened"  # 已开启
+    EXPIRED = "expired"  # 已过期
+
+
+# 盲盒奖品类型枚举
+class BlindBoxPrizeType(str, Enum):
+    BREAD_CHAMPION = "bread_champion"  # 拉布布的世界冠军面包
+    VIDEO_MEMBERSHIP = "video_membership"  # 视频平台会员
+    MUSIC_MEMBERSHIP = "music_membership"  # 音乐平台会员
+    POINTS = "points"  # 积分
+    COUPON = "coupon"  # 优惠券
+    THANK_YOU = "thank_you"  # 谢谢惠顾
+
+
+# 奖品兑换状态枚举
+class PrizeRedemptionStatus(str, Enum):
+    UNREDEEMED = "unredeemed"  # 未兑换
+    REDEEMED = "redeemed"  # 已兑换
+    EXPIRED = "expired"  # 已过期
+    USED = "used"  # 已使用
+
+
+# ==================== 充值订单模型 ====================
+
+class RechargeOrderBase(SQLModel):
+    user_id: uuid.UUID = Field(foreign_key="user.id", description="用户ID")
+    recharge_type: RechargeType = Field(description="充值类型")
+    phone_number: str = Field(max_length=20, description="充值手机号")
+    amount: int = Field(ge=0, description="充值金额（分）")
+    status: RechargeOrderStatus = Field(default=RechargeOrderStatus.PENDING, description="订单状态")
+    business_district_id: Optional[uuid.UUID] = Field(default=None, foreign_key="businessdistrict.id", description="所属商圈ID")
+    user_latitude: Optional[float] = Field(default=None, description="用户下单时的纬度")
+    user_longitude: Optional[float] = Field(default=None, description="用户下单时的经度")
+    is_eligible_for_prize: bool = Field(default=False, description="是否有资格获得盲盒")
+    order_no: str = Field(unique=True, index=True, max_length=64, description="订单号")
+    payment_method: Optional[str] = Field(default=None, max_length=50, description="支付方式")
+    paid_at: Optional[datetime] = Field(default=None, description="支付时间")
+    completed_at: Optional[datetime] = Field(default=None, description="完成时间")
+    failure_reason: Optional[str] = Field(default=None, max_length=500, description="失败原因")
+
+
+class RechargeOrderCreate(SQLModel):
+    recharge_type: RechargeType = Field(description="充值类型")
+    phone_number: str = Field(max_length=20, description="充值手机号")
+    amount: int = Field(ge=0, description="充值金额（分）")
+    user_latitude: Optional[float] = Field(default=None, description="用户纬度")
+    user_longitude: Optional[float] = Field(default=None, description="用户经度")
+
+
+class RechargeOrderUpdate(SQLModel):
+    status: Optional[RechargeOrderStatus] = Field(default=None, description="订单状态")
+    payment_method: Optional[str] = Field(default=None, max_length=50, description="支付方式")
+    paid_at: Optional[datetime] = Field(default=None, description="支付时间")
+    completed_at: Optional[datetime] = Field(default=None, description="完成时间")
+    failure_reason: Optional[str] = Field(default=None, max_length=500, description="失败原因")
+
+
+class RechargeOrder(RechargeOrderBase, table=True):
+    __tablename__ = "recharge_order"
+    
+    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
+    created_at: datetime = Field(default_factory=datetime.utcnow, description="创建时间")
+    updated_at: datetime = Field(default_factory=datetime.utcnow, description="更新时间")
+    
+    # 关系
+    user: Optional[User] = Relationship(back_populates="recharge_orders")
+    business_district: Optional[BusinessDistrict] = Relationship(back_populates="recharge_orders")
+    blind_boxes: list["UserBlindBox"] = Relationship(back_populates="recharge_order")
+
+
+class RechargeOrderPublic(RechargeOrderBase):
+    id: uuid.UUID
+    created_at: datetime
+    updated_at: datetime
+    business_district_name: Optional[str] = Field(default=None, description="商圈名称")
+
+
+class RechargeOrdersPublic(SQLModel):
+    data: list[RechargeOrderPublic]
+    total: int
+    page: int
+    page_size: int
+
+
+# ==================== 奖品模板模型 ====================
+
+class PrizeTemplateBase(SQLModel):
+    prize_code: str = Field(unique=True, index=True, max_length=100, description="奖品唯一代码")
+    name: str = Field(max_length=255, description="奖品名称")
+    description: Optional[str] = Field(default=None, description="奖品描述")
+    prize_type: BlindBoxPrizeType = Field(description="奖品类型")
+    prize_value: Optional[str] = Field(default=None, max_length=255, description="奖品价值描述")
+    image_url: Optional[str] = Field(default=None, max_length=500, description="奖品图片URL")
+    probability: float = Field(ge=0, le=100, description="中奖概率（百分比）")
+    stock: Optional[int] = Field(default=None, ge=0, description="库存数量，None表示无限")
+    daily_limit: Optional[int] = Field(default=None, ge=0, description="每日发放限制")
+    is_active: bool = Field(default=True, description="是否启用")
+    # 奖品配置（JSON格式）
+    config: Optional[str] = Field(default=None, description="奖品配置JSON，如会员天数、积分数量等")
+    # 有效期配置
+    validity_days: Optional[int] = Field(default=None, ge=0, description="奖品有效期（天），None表示永久")
+    redemption_instructions: Optional[str] = Field(default=None, description="兑换说明")
+
+
+class PrizeTemplateCreate(PrizeTemplateBase):
+    pass
+
+
+class PrizeTemplateUpdate(SQLModel):
+    name: Optional[str] = Field(default=None, max_length=255, description="奖品名称")
+    description: Optional[str] = Field(default=None, description="奖品描述")
+    prize_value: Optional[str] = Field(default=None, max_length=255, description="奖品价值描述")
+    image_url: Optional[str] = Field(default=None, max_length=500, description="奖品图片URL")
+    probability: Optional[float] = Field(default=None, ge=0, le=100, description="中奖概率")
+    stock: Optional[int] = Field(default=None, ge=0, description="库存数量")
+    daily_limit: Optional[int] = Field(default=None, ge=0, description="每日发放限制")
+    is_active: Optional[bool] = Field(default=None, description="是否启用")
+    config: Optional[str] = Field(default=None, description="奖品配置JSON")
+    validity_days: Optional[int] = Field(default=None, ge=0, description="有效期天数")
+    redemption_instructions: Optional[str] = Field(default=None, description="兑换说明")
+
+
+class PrizeTemplate(PrizeTemplateBase, table=True):
+    __tablename__ = "prize_template"
+    
+    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
+    created_at: datetime = Field(default_factory=datetime.utcnow, description="创建时间")
+    updated_at: datetime = Field(default_factory=datetime.utcnow, description="更新时间")
+    
+    # 关系
+    user_prizes: list["BlindBoxUserPrize"] = Relationship(back_populates="prize_template")
+
+
+class PrizeTemplatePublic(PrizeTemplateBase):
+    id: uuid.UUID
+    created_at: datetime
+    updated_at: datetime
+    remaining_stock: Optional[int] = Field(default=None, description="剩余库存")
+
+
+class PrizeTemplatesPublic(SQLModel):
+    data: list[PrizeTemplatePublic]
+    total: int
+
+
+# ==================== 用户盲盒模型 ====================
+
+class UserBlindBoxBase(SQLModel):
+    user_id: uuid.UUID = Field(foreign_key="user.id", description="用户ID")
+    recharge_order_id: uuid.UUID = Field(foreign_key="recharge_order.id", description="关联的充值订单ID")
+    status: BlindBoxStatus = Field(default=BlindBoxStatus.UNOPENED, description="盲盒状态")
+    opened_at: Optional[datetime] = Field(default=None, description="开启时间")
+    expired_at: Optional[datetime] = Field(default=None, description="过期时间")
+
+
+class UserBlindBoxCreate(SQLModel):
+    user_id: uuid.UUID = Field(description="用户ID")
+    recharge_order_id: uuid.UUID = Field(description="关联的充值订单ID")
+    expired_at: Optional[datetime] = Field(default=None, description="过期时间")
+
+
+class UserBlindBox(UserBlindBoxBase, table=True):
+    __tablename__ = "user_blind_box"
+    
+    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
+    created_at: datetime = Field(default_factory=datetime.utcnow, description="创建时间")
+    updated_at: datetime = Field(default_factory=datetime.utcnow, description="更新时间")
+    
+    # 关系
+    user: Optional[User] = Relationship(back_populates="blind_boxes")
+    recharge_order: Optional[RechargeOrder] = Relationship(back_populates="blind_boxes")
+    prize: Optional["BlindBoxUserPrize"] = Relationship(back_populates="blind_box", sa_relationship_kwargs={"uselist": False})
+
+
+class UserBlindBoxPublic(UserBlindBoxBase):
+    id: uuid.UUID
+    created_at: datetime
+    updated_at: datetime
+    recharge_order_no: Optional[str] = Field(default=None, description="充值订单号")
+    recharge_amount: Optional[int] = Field(default=None, description="充值金额")
+    recharge_type: Optional[str] = Field(default=None, description="充值类型")
+
+
+class UserBlindBoxesPublic(SQLModel):
+    data: list[UserBlindBoxPublic]
+    total: int
+    unopened_count: int  # 未开启数量
+    opened_count: int  # 已开启数量
+
+
+# ==================== 盲盒用户奖品模型 ====================
+
+class BlindBoxUserPrizeBase(SQLModel):
+    user_id: uuid.UUID = Field(foreign_key="user.id", description="用户ID")
+    blind_box_id: uuid.UUID = Field(foreign_key="user_blind_box.id", unique=True, description="盲盒ID")
+    prize_template_id: uuid.UUID = Field(foreign_key="prize_template.id", description="奖品模板ID")
+    redemption_status: PrizeRedemptionStatus = Field(default=PrizeRedemptionStatus.UNREDEEMED, description="兑换状态")
+    redemption_code: Optional[str] = Field(default=None, max_length=100, description="兑换码")
+    redeemed_at: Optional[datetime] = Field(default=None, description="兑换时间")
+    used_at: Optional[datetime] = Field(default=None, description="使用时间")
+    expired_at: Optional[datetime] = Field(default=None, description="过期时间")
+    notes: Optional[str] = Field(default=None, max_length=500, description="备注信息")
+
+
+class BlindBoxUserPrizeCreate(SQLModel):
+    user_id: uuid.UUID = Field(description="用户ID")
+    blind_box_id: uuid.UUID = Field(description="盲盒ID")
+    prize_template_id: uuid.UUID = Field(description="奖品模板ID")
+    redemption_code: Optional[str] = Field(default=None, max_length=100, description="兑换码")
+    expired_at: Optional[datetime] = Field(default=None, description="过期时间")
+
+
+class BlindBoxUserPrizeUpdate(SQLModel):
+    redemption_status: Optional[PrizeRedemptionStatus] = Field(default=None, description="兑换状态")
+    redeemed_at: Optional[datetime] = Field(default=None, description="兑换时间")
+    used_at: Optional[datetime] = Field(default=None, description="使用时间")
+    notes: Optional[str] = Field(default=None, max_length=500, description="备注信息")
+
+
+class BlindBoxUserPrize(BlindBoxUserPrizeBase, table=True):
+    __tablename__ = "blind_box_user_prize"
+    
+    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
+    created_at: datetime = Field(default_factory=datetime.utcnow, description="获得时间")
+    updated_at: datetime = Field(default_factory=datetime.utcnow, description="更新时间")
+    
+    # 关系
+    user: Optional[User] = Relationship(back_populates="blind_box_prizes")
+    blind_box: Optional[UserBlindBox] = Relationship(back_populates="prize")
+    prize_template: Optional[PrizeTemplate] = Relationship(back_populates="user_prizes")
+
+
+class BlindBoxUserPrizePublic(BlindBoxUserPrizeBase):
+    id: uuid.UUID
+    created_at: datetime
+    updated_at: datetime
+    prize_name: Optional[str] = Field(default=None, description="奖品名称")
+    prize_type: Optional[str] = Field(default=None, description="奖品类型")
+    prize_image_url: Optional[str] = Field(default=None, description="奖品图片")
+    prize_value: Optional[str] = Field(default=None, description="奖品价值")
+    redemption_instructions: Optional[str] = Field(default=None, description="兑换说明")
+
+
+class BlindBoxUserPrizesPublic(SQLModel):
+    data: list[BlindBoxUserPrizePublic]
+    total: int
+    unredeemed_count: int  # 未兑换数量
+    redeemed_count: int  # 已兑换数量
+
+
+# ==================== 盲盒抽奖统计模型 ====================
+
+class BlindBoxStats(SQLModel):
+    """盲盒统计信息"""
+    total_blind_boxes: int = Field(description="总盲盒数")
+    unopened_count: int = Field(description="未开启数量")
+    opened_count: int = Field(description="已开启数量")
+    total_prizes: int = Field(description="总奖品数")
+    unredeemed_prizes: int = Field(description="未兑换奖品数")
+
+
+class OpenBlindBoxRequest(SQLModel):
+    """开启盲盒请求"""
+    blind_box_id: uuid.UUID = Field(description="盲盒ID")
+
+
+class OpenBlindBoxResponse(SQLModel):
+    """开启盲盒响应"""
+    success: bool
+    message: str
+    data: Optional[BlindBoxUserPrizePublic] = Field(default=None, description="获得的奖品")

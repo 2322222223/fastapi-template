@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.routes import items, login, private, users, utils, regions, phone_auth, hot_search, products, data_packages, membership_benefits, user_wallet, coupons, cart, orders, points, invitations, dialogs, lottery, discovery, service_account, address, points_mall
+from app.api.routes import items, login, private, users, utils, regions, phone_auth, hot_search, products, data_packages, membership_benefits, user_wallet, coupons, cart, orders, points, invitations, dialogs, lottery, discovery, service_account, address, points_mall, blindbox
 from app.core.config import settings
 
 api_router = APIRouter()
@@ -26,6 +26,7 @@ api_router.include_router(discovery.router, prefix="/discovery", tags=["discover
 api_router.include_router(service_account.router, prefix="/service-accounts", tags=["service-accounts"])
 api_router.include_router(address.router, prefix="/addresses", tags=["addresses"])
 api_router.include_router(points_mall.router, prefix="/points-mall", tags=["points-mall"])
+api_router.include_router(blindbox.router, prefix="/blindbox", tags=["blindbox"])
 
 
 if settings.ENVIRONMENT == "local":

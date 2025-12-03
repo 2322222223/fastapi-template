@@ -34,3 +34,5 @@ python app/initial_service_account_data.py
 
 python app/initial_points_mall_data.py
 
+python app/initial_blindbox_data.py
+

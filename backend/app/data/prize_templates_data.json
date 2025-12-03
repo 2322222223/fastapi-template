@@ -1,0 +1,78 @@
+[
+  {
+    "prize_code": "BREAD_CHAMPION_001",
+    "name": "拉布布的世界冠军面包",
+    "description": "来自世界冠军面包师的精心之作，松软香甜",
+    "prize_type": "bread_champion",
+    "prize_value": "价值68元",
+    "image_url": "https://example.com/images/bread_champion.jpg",
+    "probability": 8.0,
+    "stock": 100,
+    "daily_limit": 20,
+    "is_active": true,
+    "config": "{\"partner\": \"拉布布面包店\", \"validity_type\": \"coupon\"}",
+    "validity_days": 30,
+    "redemption_instructions": "请持兑换码前往拉布布面包店任意门店兑换。地址和营业时间请查看门店列表。"
+  },
+  {
+    "prize_code": "LABUBU_BLINDBOX",
+    "name": "Labubu限量盲盒",
+    "description": "THE MONSTERS系列Labubu精选盲盒，随机款式",
+    "prize_type": "bread_champion",
+    "prize_value": "价值199元",
+    "image_url": "https://example.com/images/labubu_blindbox.jpg",
+    "probability": 2.0,
+    "stock": 50,
+    "daily_limit": 5,
+    "is_active": true,
+    "config": "{\"brand\": \"POP MART\", \"series\": \"THE MONSTERS\"}",
+    "validity_days": 30,
+    "redemption_instructions": "请持兑换码前往指定POP MART门店或线上商城兑换。具体门店信息请联系客服。"
+  },
+  {
+    "prize_code": "JAY_CONCERT_TICKET",
+    "name": "周杰伦演唱会门票",
+    "description": "周杰伦2025巡回演唱会门票一张（指定场次）",
+    "prize_type": "video_membership",
+    "prize_value": "价值880元",
+    "image_url": "https://example.com/images/jay_concert.jpg",
+    "probability": 0.5,
+    "stock": 20,
+    "daily_limit": 2,
+    "is_active": true,
+    "config": "{\"artist\": \"周杰伦\", \"tour\": \"2025巡回演唱会\", \"seat_type\": \"指定区域\"}",
+    "validity_days": 60,
+    "redemption_instructions": "中奖后将有专人联系您确认场次和座位信息，请保持手机畅通。门票将通过电子票形式发送。"
+  },
+  {
+    "prize_code": "KFC_COMBO",
+    "name": "肯德基豪华套餐",
+    "description": "肯德基指定豪华套餐兑换券（含汉堡、薯条、可乐）",
+    "prize_type": "coupon",
+    "prize_value": "价值58元",
+    "image_url": "https://example.com/images/kfc_combo.jpg",
+    "probability": 15.0,
+    "stock": 500,
+    "daily_limit": 50,
+    "is_active": true,
+    "config": "{\"brand\": \"肯德基\", \"combo_type\": \"豪华套餐\"}",
+    "validity_days": 30,
+    "redemption_instructions": "请持兑换码前往肯德基任意门店或通过肯德基APP扫码兑换。不可兑换现金，不找零。"
+  },
+  {
+    "prize_code": "THANK_YOU",
+    "name": "谢谢惠顾",
+    "description": "很遗憾，下次再来",
+    "prize_type": "thank_you",
+    "prize_value": "再接再厉",
+    "image_url": "https://example.com/images/thank_you.jpg",
+    "probability": 74.5,
+    "stock": null,
+    "daily_limit": null,
+    "is_active": true,
+    "config": "{}",
+    "validity_days": null,
+    "redemption_instructions": "感谢参与，期待下次好运降临！"
+  }
+]
+
